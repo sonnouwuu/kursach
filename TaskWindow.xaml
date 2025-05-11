@@ -1,0 +1,280 @@
+﻿<Window x:Class="virus1.TaskWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStyle="None"
+        Height="600" Width="870"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        Background="#1E1E1E">
+
+    <!-- Обернем всю Grid в ScrollViewer -->
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid>
+
+
+            <Grid.Resources>
+                <!-- Стиль кнопки с анимацией -->
+                <Style TargetType="Button" x:Key="AnimatedButtonStyle">
+                    <Setter Property="RenderTransform">
+                        <Setter.Value>
+                            <ScaleTransform ScaleX="1" ScaleY="1"/>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleX)"
+                                              From="1" To="1.1" Duration="0:0:0.3"/>
+                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleY)"
+                                              From="1" To="1.1" Duration="0:0:0.3"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleX)"
+                                              From="1.1" To="1" Duration="0:0:0.3"/>
+                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleY)"
+                                              From="1.1" To="1" Duration="0:0:0.3"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Grid.Resources>
+
+
+
+
+            <!-- Фоновое изображение -->
+            <Image Source="image1/12.jpg" Stretch="Fill"
+                   Panel.ZIndex="-1" Opacity="0.7"/>
+
+            <!-- Заголовок -->
+            <TextBlock Text="Виды вредоносных программ"
+                       FontFamily="JetBrains Mono NL ExtraBold"
+                       FontSize="24" Foreground="#FFB48282"
+                       HorizontalAlignment="Center" Margin="0,20,0,1546"/>
+
+            <!-- Оформленная категория вирусов -->
+            <Border CornerRadius="15" Background="#292929"
+                    Padding="10" Margin="40,100,40,1586">
+                <StackPanel>
+                    <TextBlock Text="Категории вирусов"
+                               FontFamily="JetBrains Mono NL ExtraBold"
+                               FontSize="18" Foreground="#FFB48282"
+                               HorizontalAlignment="Center"/>
+
+                    <!-- Карточки вирусов -->
+                    <Border CornerRadius="10" Background="#3E3E3E" Padding="8" Margin="5" Height="117" RenderTransformOrigin="0.511,0.098" Width="685">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="image1/troan.png" Width="104" Height="79"
+                                   Stretch="Uniform"/>
+                            <TextBlock
+                                       Foreground="#FFB48281" FontSize="16" Width="602" Height="91" FontFamily="JetBrains Mono NL ExtraLight" TextWrapping="Wrap" Text="Троянские программы (Trojan) - маскируются под легитимное ПО,но выполняют  вредоносные действия, а также часто используются для кражи данных, удалённого управления компьютером."/>
+                        </StackPanel>
+                    </Border>
+
+
+
+                    <Border CornerRadius="10" Background="#3E3E3E" Padding="8" Margin="5" Height="117" RenderTransformOrigin="0.511,0.098" Width="685">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="image1/worm.png" Width="104" Height="67"
+                   Stretch="Uniform"/>
+                            <TextBlock
+                       Foreground="#FFB48281" FontSize="16" Width="601" Height="68" FontFamily="JetBrains Mono NL ExtraLight" TextWrapping="Wrap"><Run Text="Черви (Worm) - самостоятельно распространяются по сети, копируя себя на другие устройства, вызывают перегрузку сис-"/><LineBreak/><Run Text="тем и сетей."/></TextBlock>
+                        </StackPanel>
+                    </Border>
+
+
+
+                    <Border CornerRadius="10" Background="#3E3E3E" Padding="8" Margin="5" Height="117" RenderTransformOrigin="0.511,0.098" Width="685">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="image1/shirfr.png" Width="104" Height="79"
+                Stretch="Uniform"/>
+                            <TextBlock
+                    Foreground="#FFB48281" FontSize="16" Width="560" Height="62" FontFamily="JetBrains Mono NL ExtraLight" Text="Вирусы-шифровальщики (Ransomware) - заражают файлы, шифруют их и требуют выкуп за расшифровку, одна из самых опасных угроз для бизнеса и пользователей." TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Border>
+
+
+                    <Border CornerRadius="10" Background="#3E3E3E" Padding="8" Margin="5" Height="117" RenderTransformOrigin="0.511,0.098" Width="685">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="image1/rytkit.png" Width="104" Height="71"
+                        Stretch="Uniform"/>
+                            <TextBlock
+                                         Foreground="#FFB48281" FontSize="16" Width="560" Height="65" FontFamily="JetBrains Mono NL ExtraLight" Text="Руткиты (Rootkit) - позволяют скрывать вредоносное ПО от антивирусов и пользователей, используются для захвата контроля над системой." TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Border>
+
+
+
+                    <Border CornerRadius="10" Background="#3E3E3E" Padding="8" Margin="5" Height="117" RenderTransformOrigin="0.511,0.098" Width="685">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="image1/fail.png" Width="104" Height="71"
+                    Stretch="Uniform"/>
+                            <TextBlock
+                                        Foreground="#FFB48281" FontSize="16" Width="560" Height="45" FontFamily="JetBrains Mono NL ExtraLight" Text="Файловые вирусы - заражают исполняемые файлы (.exe, .dll), активируются при запуске заражённого файла." TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Border>
+
+
+                    <Border CornerRadius="10" Background="#3E3E3E" Padding="8" Margin="5" Height="117" RenderTransformOrigin="0.511,0.098" Width="685">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="image1/botnet.png" Width="104" Height="71"
+                    Stretch="Uniform"/>
+                            <TextBlock
+                                        Foreground="#FFB48281" FontSize="16" Width="560" Height="65" FontFamily="JetBrains Mono NL ExtraLight" Text="Ботнеты - pахватывают компьютеры, превращая их в «зомби» для кибератак, используются для DDoS-атак, спама, скрытого майнинга." TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border CornerRadius="10" Background="#3E3E3E" Padding="8" Margin="5" Height="117" RenderTransformOrigin="0.511,0.098" Width="685">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="image1/reklama.png" Width="104" Height="71"
+Stretch="Uniform"/>
+                            <TextBlock
+                    Foreground="#FFB48281" FontSize="16" Width="560" Height="65" FontFamily="JetBrains Mono NL ExtraLight" Text="Рекламное ПО (Adware) - показывает нежелательные рекламные объявления, может замедлять работу системы и отслеживать действия пользователя." TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Border>
+
+
+
+
+
+
+                </StackPanel>
+
+            </Border>
+
+            <TextBlock Text="Анимированная карта заражения" Margin="210,1106,210,1317"  FontFamily="JetBrains Mono NL ExtraBold" Foreground="#FFB48281" FontSize="24"/>
+            <Canvas Name="NetworkCanvas" Background="#292929" Margin="43,1161,38,879"/>
+
+
+
+
+            <TextBlock Text="Вирусы" Margin="408,1832,259,744"   Foreground="#FFB48281" FontSize="24"  FontFamily="JetBrains Mono NL ExtraBold"/>
+
+            <Button Content="ILOVEYOU" HorizontalAlignment="Left" 
+        Margin="221,1913,0,0" VerticalAlignment="Top" 
+        Height="39" Width="446" Click="OpenPage"
+        Style="{StaticResource AnimatedButtonStyle}" 
+        RenderTransformOrigin="0.5,0.5" Foreground="#FFB48281" FontSize="16"  FontFamily="JetBrains Mono NL ExtraLight">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF675656"/>
+                        <GradientStop Color="#FF8D1717" Offset="1"/>
+                        <GradientStop Color="#FF793737" Offset="0.372"/>
+                        <GradientStop Color="#FF7C3131" Offset="0.651"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+
+            <Button Content="WannaCry" HorizontalAlignment="Left" 
+Margin="222,1989,0,0" VerticalAlignment="Top" 
+Height="39" Width="446" Click="WannaCry"
+Style="{StaticResource AnimatedButtonStyle}" 
+RenderTransformOrigin="0.5,0.5" Foreground="#FFB48281" FontSize="16"  FontFamily="JetBrains Mono NL ExtraLight">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF675656"/>
+                        <GradientStop Color="#FF8D1717" Offset="1"/>
+                        <GradientStop Color="#FF793737" Offset="0.372"/>
+                        <GradientStop Color="#FF7C3131" Offset="0.651"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+
+            <Button Content="MyDoom" HorizontalAlignment="Left" 
+Margin="222,2063,0,0" VerticalAlignment="Top" 
+Height="39" Width="446" Click="MyDoom"
+Style="{StaticResource AnimatedButtonStyle}" 
+RenderTransformOrigin="0.5,0.5" Foreground="#FFB48281" FontSize="16"  FontFamily="JetBrains Mono NL ExtraLight">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF675656"/>
+                        <GradientStop Color="#FF8D1717" Offset="1"/>
+                        <GradientStop Color="#FF793737" Offset="0.372"/>
+                        <GradientStop Color="#FF7C3131" Offset="0.651"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+
+            <Button Content="Stuxnet" HorizontalAlignment="Left" 
+Margin="222,2140,0,0" VerticalAlignment="Top" 
+Height="39" Width="446" Click="Stuxnet"
+Style="{StaticResource AnimatedButtonStyle}" 
+RenderTransformOrigin="0.5,0.5" Foreground="#FFB48281" FontSize="16"  FontFamily="JetBrains Mono NL ExtraLight">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF675656"/>
+                        <GradientStop Color="#FF8D1717" Offset="1"/>
+                        <GradientStop Color="#FF793737" Offset="0.372"/>
+                        <GradientStop Color="#FF7C3131" Offset="0.651"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button Content="NotPetya" HorizontalAlignment="Left" 
+Margin="222,2216,0,0" VerticalAlignment="Top" 
+Height="39" Width="446" Click="NotPetya"
+Style="{StaticResource AnimatedButtonStyle}" 
+RenderTransformOrigin="0.5,0.5" Foreground="#FFB48281" FontSize="16"  FontFamily="JetBrains Mono NL ExtraLight">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF675656"/>
+                        <GradientStop Color="#FF8D1717" Offset="1"/>
+                        <GradientStop Color="#FF793737" Offset="0.372"/>
+                        <GradientStop Color="#FF7C3131" Offset="0.651"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+
+            <Button Content="SQL Slammer" HorizontalAlignment="Left" 
+Margin="222,2295,0,0" VerticalAlignment="Top" 
+Height="39" Width="446" Click="SQL" 
+Style="{StaticResource AnimatedButtonStyle}" 
+RenderTransformOrigin="0.5,0.5" Foreground="#FFB48281" FontSize="16"  FontFamily="JetBrains Mono NL ExtraLight">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF675656"/>
+                        <GradientStop Color="#FF8D1717" Offset="1"/>
+                        <GradientStop Color="#FF793737" Offset="0.372"/>
+                        <GradientStop Color="#FF7C3131" Offset="0.651"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Image Margin="549,1847,125,578" Source="/image1/22.png" Stretch="Fill" RenderTransformOrigin="0.557,0.574">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="1.154"/>
+                        <TranslateTransform X="-0.353" Y="0.193"/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image Margin="117,2204,526,253" Source="/image1/21 (1).png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform AngleY="0.465"/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="0.792"/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Button  HorizontalAlignment="Left" Margin="59,2439,0,0" VerticalAlignment="Top" Height="75" Width="75"  Background="DarkRed" Click="Nazad_Click" >
+                <Image Height="75" Source="/image1/18.png" Stretch="Fill" Width="75" />
+
+            </Button>
+
+        </Grid>
+    </ScrollViewer>
+</Window>

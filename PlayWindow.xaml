@@ -1,0 +1,97 @@
+﻿<Window x:Class="virus1.PlayWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:virus1"
+        mc:Ignorable="d"
+         WindowStyle="None"
+        Title="Симуляция атак" Height="610" Width="865" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <!-- Градиентный фон -->
+
+
+        <!-- Стили для кнопок -->
+        <Style TargetType="Button">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#440000"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="BorderBrush" Value="Red"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+
+        </Style>
+
+        <!-- Неоновый стиль текста -->
+        <Style TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="JetBrains Mono ExtraBold"/>
+            <Setter Property="Foreground" Value="#FFDCA3A3"/>
+        </Style>
+    </Window.Resources>
+
+
+
+    <Grid Margin="0,0,0,0">
+
+
+
+
+        <!-- Лог атак -->
+
+        <TextBox Name="AttackLog" IsReadOnly="True" Background="Black"
+                 Foreground="Lime" TextWrapping="Wrap"
+                 VerticalScrollBarVisibility="Auto" Margin="42,101,343,151"/>
+
+
+
+        <!-- Кнопки атаки и защиты -->
+        <Button Name="StartAttackButton" Content="Запустить атаку"
+                Width="NaN" Margin="557,212,100,315"
+                Click="StartAttack_Click"/>
+
+
+
+        <!-- Выбор типа защиты -->
+        <ComboBox Name="DefenseOptions" Margin="557,297,100,238" RenderTransformOrigin="0.585,-2.913">
+            <ComboBoxItem Content="Антивирусное сканирование"/>
+            <ComboBoxItem Content="Файрвол блокирует атаку"/>
+            <ComboBoxItem Content="Восстановление системы"/>
+            <ComboBoxItem Content="Изоляция заражённых файлов"/>
+            <ComboBoxItem Content="Глубокое антивирусное сканирование"/>
+            <ComboBoxItem Content="Отключение зараженной сети"/>
+            <ComboBoxItem Content="Обновление системы"/>
+            <ComboBoxItem Content="Блокрировка подозрительных доменов"/>
+            <ComboBoxItem Content="Очистка вредоносных расширений"/>
+            <ComboBoxItem Content="Ограничение исходящих подключений "/>
+        </ComboBox>
+
+
+        <Button Name="ApplyDefenseButton" Content="Применить защиту"
+                Width="NaN" Margin="557,395,100,127"
+                Click="ApplyDefense_Click"/>
+
+        <!-- Таймер -->
+        <TextBlock Name="TimerText" Text="⏳ Осталось: 20 сек"
+                   Foreground="#FF1A1A08" FontSize="16" Margin="554,104,64,429" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="2.08"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.564"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <ProgressBar Name="AttackProgressBar"
+                     Maximum="20" Value="20" Margin="557,156,10,417"/>
+        <TextBlock Text="Симуляция вирусных атак"   Foreground="#FFDCA3A3" FontFamily="JetBrains Mono ExtraBold" FontSize="24" HorizontalAlignment="Left" Margin="282,25,0,508" Grid.ColumnSpan="2" Width="348"/>
+
+        <Button  Width="75" Height="75" Click="Nazad_Click" Margin="0,450,0,0" >
+            <Image Height="64" Source="/image1/18.png" Stretch="Fill" Width="65" RenderTransformOrigin="0.585,0.586" />
+        </Button>
+
+    </Grid>
+
+</Window>

@@ -1,0 +1,355 @@
+﻿<Window x:Class="virus1.SovetWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:virus1"
+        mc:Ignorable="d"
+         WindowStyle="None"
+        Title="Советы и рекомендации" Height="600" Width="830" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+
+    <Grid  Margin="0,0,0,-6">
+        <Grid.Background>
+            <ImageBrush ImageSource="/image1/12.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <!-- Прокручиваемое содержимое -->
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Margin="10,0,0,10">
+            <StackPanel>
+                <!-- Заголовок страницы -->
+                <TextBlock Text="СОВЕТЫ И РЕКОМЕНДАЦИИ"
+                           FontFamily="JetBrains Mono NL ExtraBold" FontSize="24" 
+                           TextAlignment="Center"  
+                           Foreground="#FFDCA3A3" Margin="0,10,0,20" />
+                <TextBlock Text="Советы по защите"
+                           FontFamily="JetBrains Mono NL ExtraBold" FontSize="16" 
+                           Foreground="#FFDCA3A3" 
+                           Width="174" Height="27" RenderTransformOrigin="0.5,0.5">
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.262"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+
+                <!-- Подзаголовок -->
+
+                <ListBox Margin="10" RenderTransformOrigin="0.5,0.5" Height="208">
+                    <ListBox.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="#FF671102" Offset="0"/>
+                            <GradientStop Color="#FF3C0606" Offset="1"/>
+                        </LinearGradientBrush>
+                    </ListBox.Background>
+
+                    <ListBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="0" Y="-3"/>
+                        </TransformGroup>
+                    </ListBox.RenderTransform>
+                    <!-- Главный пункт -->
+                    <ListBoxItem FontFamily="JetBrains Mono NL ExtraLight" Background="DarkRed" Height="202" Foreground="#FFBE93A3">
+
+
+
+
+
+                        <StackPanel Margin="10,5,0,0" Width="678" Height="193">
+                            <!-- Вложенные элементы -->
+                            <TextBlock FontWeight="Bold" Text="1.Установите антивирусное ПО:" FontFamily="JetBrains Mono NL ExtraBold" Foreground="#FFBE93A3" />
+                            <TextBlock Text="• Выберите проверенную антивирусную программу." TextWrapping="Wrap" Margin="20,0,0,0"  />
+                            <TextBlock Text="• Регулярно обновляйте базу данных вирусов, чтобы защититься от новых угроз." TextWrapping="Wrap" Margin="20,0,0,0"  />
+                            <TextBlock FontWeight="Bold" Text="2. Обновляйте системы и программы:"  FontFamily="JetBrains Mono NL ExtraBold" Foreground="#FFBE93A3" />
+                            <TextBlock  Text="• Убедитесь, что операционная система и установленное ПО всегда актуальны." TextWrapping="Wrap" Margin="20,0,0,0"  />
+                            <TextBlock  Text="• Устаревшие версии могут содержать уязвимости, которые используют вирусы." TextWrapping="Wrap" Margin="20,0,0,0" />
+                            <TextBlock FontWeight="Bold" Text="3. Используйте надёжные пароли:"  FontFamily="JetBrains Mono NL ExtraBold" Foreground="#FFBE93A3" />
+                            <TextBlock  Text="• Создавайте длинные и сложные пароли." TextWrapping="Wrap" Margin="20,0,0,0" />
+                            <TextBlock  Text="• Не используйте один и тот же пароль для нескольких аккаунтов." TextWrapping="Wrap" Margin="20,0,0,0" />
+                            <TextBlock FontWeight="Bold" Text="3. Будьте осторожны с подозрительными файлами:"  FontFamily="JetBrains Mono NL ExtraBold" Foreground="#FFBE93A3" Height="16" />
+                            <TextBlock  Text="• Не открывайте вложения в письмах от неизвестных отправителей." TextWrapping="Wrap" Margin="20,0,0,0" />
+                            <TextBlock  Text="• Всегда проверяйте скачанные файлы антивирусом." TextWrapping="Wrap" Margin="20,0,0,0" />
+                        </StackPanel>
+                    </ListBoxItem>
+
+                </ListBox>
+
+                <TextBlock Text="Пошаговый план действий при заражении" 
+                                FontFamily="JetBrains Mono NL ExtraBold" FontSize="16" 
+                                FontWeight="Bold" Foreground="#FFBE93A3"
+                                Width="370"/>
+                <ListBox Margin="10" RenderTransformOrigin="0.5,0.5">
+
+                    <ListBox.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="#FF671102" Offset="0"/>
+                            <GradientStop Color="#FF3C0606" Offset="1"/>
+                        </LinearGradientBrush>
+                    </ListBox.Background>
+
+                    <ListBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="0" Y="-3"/>
+                        </TransformGroup>
+                    </ListBox.RenderTransform>
+                    <!-- Главный пункт -->
+                    <ListBoxItem FontFamily="JetBrains Mono NL ExtraLight" Background="DarkRed" Height="140"  Foreground="#FFBE93A3">
+
+                        <StackPanel Margin="10,5,0,0" Width="678" Height="193">
+                            <!-- Вложенные элементы -->
+                            <TextBlock FontWeight="Bold" Text="1. Отключите Wi-Fi или кабельное соединение:" FontFamily="JetBrains Mono NL ExtraBold" />
+                            <TextBlock Text="• Найдите настройки сети на компьютере и отключите активное соединение." TextWrapping="Wrap" Margin="20,0,0,0"/>
+                            <TextBlock Text="• Если используется кабель Ethernet, физически отключите его." TextWrapping="Wrap" Margin="20,0,0,0"/>
+                            <TextBlock FontWeight="Bold" Text="2. Изолируйте заражённое устройство:" FontFamily="JetBrains Mono NL ExtraBold" />
+                            <TextBlock  Text="• Убедитесь, что заражённый компьютер не подключен к другим устройствам (например, через Bluetooth или локальную сеть)." TextWrapping="Wrap" Margin="20,0,0,0"/>
+                            <TextBlock FontWeight="Bold" Text="3. Ограничьте взаимодействие с внешними устройствами:" FontFamily="JetBrains Mono NL ExtraBold" />
+                            <TextBlock  Text="• Избегайте подключения внешних носителей, таких как USB-накопители, пока система не будет защищена." TextWrapping="Wrap" Margin="20,0,0,0"/>
+
+                        </StackPanel>
+                    </ListBoxItem>
+                </ListBox>
+
+                <TextBlock Text="Часто задаваемые вопросы" 
+                           FontFamily="JetBrains Mono NL ExtraBold" FontSize="16" 
+                           FontWeight="Bold" Foreground="#FFBE93A3"
+                           Width="230" Height="29"/>
+                <ListBox Margin="10" RenderTransformOrigin="0.5,0.5" Height="295" Width="751">
+
+                    <ListBox.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="#FF671102" Offset="0"/>
+                            <GradientStop Color="#FF3C0606" Offset="1"/>
+                        </LinearGradientBrush>
+                    </ListBox.Background>
+
+                    <ListBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="0" Y="-3"/>
+                        </TransformGroup>
+                    </ListBox.RenderTransform>
+                    <!-- Главный пункт -->
+                    <ListBoxItem FontFamily="JetBrains Mono NL ExtraLight" Background="DarkRed" Height="296" Width="745" Foreground="#FFBE93A3">
+
+                        <StackPanel Margin="10,0,0,0" Width="678" Height="297">
+                            <!-- Вложенные элементы -->
+                            <!-- Вложенные элементы -->
+                            <!-- Вложенные элементы -->
+                            <TextBlock FontWeight="Bold" Text="1.Как вирусы попадают на компьютер?" FontFamily="Cascadia Code PL" Height="20" Width="684" />
+                            <TextBlock Text="Вирусы могут попасть через:" TextWrapping="Wrap" Margin="20,0,0,0"/>
+                            <TextBlock Text="• Заражённые вложения в письмах." TextWrapping="Wrap" Margin="20,0,0,0"/>
+                            <TextBlock Text="• Подозрительные ссылки." TextWrapping="Wrap" Margin="20,0,0,0"/>
+                            <TextBlock Text="• Скачивание файлов с ненадёжных сайтов." TextWrapping="Wrap" Margin="20,0,0,0"/>
+                            <TextBlock Text="• Уязвимости в программном обеспечении." TextWrapping="Wrap" Margin="20,0,0,0"/>
+
+                            <TextBlock FontWeight="Bold" Text="2. Может ли антивирус полностью защитить меня от вирусов?" FontFamily="Cascadia Mono PL SemiBold" />
+                            <TextBlock  Text="• Антивирус значительно снижает риск заражения, но важно также соблюдать базовые правила безопасности, такие как осторожное поведение в интернете." TextWrapping="Wrap" Margin="20,0,0,0"/>
+
+                            <TextBlock FontWeight="Bold" Text="3. Какие последствия может вызвать вирус?" FontFamily="Cascadia Mono PL SemiBold" Height="20" />
+                            <TextBlock  Text="• Уничтожать или повреждать файлы." TextWrapping="Wrap" Margin="20,0,0,0"/>
+                            <TextBlock  Text="• Замедлять работу компьютера." TextWrapping="Wrap" Margin="20,0,0,0"/>
+                            <TextBlock  Text="• Красть конфиденциальную информацию." TextWrapping="Wrap" Margin="20,0,0,0"/>
+                            <TextBlock  Text="• Включать ваш компьютер в сеть ботнетов для атак." TextWrapping="Wrap" Margin="20,0,0,0"/>
+
+                            <TextBlock FontWeight="Bold" Text="4. Как я могу узнать, что мой компьютер заражён вирусом??" FontFamily="Cascadia Mono PL SemiBold" Height="20" />
+                            <TextBlock  Text="• Медленная работа системы." TextWrapping="Wrap" Margin="20,0,0,0"/>
+                            <TextBlock  Text="• Неожиданные всплывающие окна." TextWrapping="Wrap" Margin="20,0,0,0"/>
+                            <TextBlock  Text="• Автоматическое изменение настроек." TextWrapping="Wrap" Margin="20,0,0,0"/>
+                            <TextBlock  Text="• Удаление или повреждение файлов." TextWrapping="Wrap" Margin="20,0,0,0"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                </ListBox>
+
+                <TextBlock Text="Советы по безопасному серфингу в интернете" 
+           FontFamily="JetBrains Mono NL ExtraBold" FontSize="16" 
+            FontWeight="Bold" Foreground="#FFBE93A3" 
+            Width="374" Height="29"/>
+                <ListBox Margin="10" RenderTransformOrigin="0.5,0.5" Height="119" Width="738">
+
+                    <ListBox.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="#FF671102" Offset="0"/>
+                            <GradientStop Color="#FF3C0606" Offset="1"/>
+                        </LinearGradientBrush>
+                    </ListBox.Background>
+
+
+                    <ListBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="0" Y="-3"/>
+                        </TransformGroup>
+                    </ListBox.RenderTransform>
+                    <!-- Главный пункт -->
+                    <ListBoxItem FontFamily="JetBrains Mono NL ExtraLight" Background="DarkRed" Height="122" Width="733" Foreground="#FFBE93A3">
+
+                        <StackPanel Margin="10,0,0,0" Width="678" Height="296" RenderTransformOrigin="0.5,0.5">
+                            <StackPanel.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform AngleY="0.101"/>
+                                    <RotateTransform/>
+                                    <TranslateTransform Y="0.598"/>
+                                </TransformGroup>
+                            </StackPanel.RenderTransform>
+                            <!-- Вложенные элементы -->
+                            <!-- Вложенные элементы -->
+                            <!-- Вложенные элементы -->
+                            <TextBlock FontFamily="Cascadia Code PL" Height="30" Width="714" ><Run Text="1. Использование надёжных браузеров с функциями защиты (например, блокировкой вредоносных "/><LineBreak/><Run Text="сайтов)."/></TextBlock>
+                            <TextBlock  Text="2. Осторожность при переходе по ссылкам — особенно в письмах, соцсетях и на форумах." FontFamily="Cascadia Mono PL" Width="683" />
+                            <TextBlock FontFamily="Cascadia Mono PL" Height="28" Width="702" ><Run Text="3. Включение защиты против фишинга в браузере (например, в Chrome и Edge есть встроенные "/><LineBreak/><Run Text="механизмы)."/></TextBlock>
+                            <TextBlock  Text="4. Избегать подозрительных сайтов, предлагающих бесплатные загрузки или взломанные программы." FontFamily="Cascadia Mono PL" Height="20" />
+
+                        </StackPanel>
+                    </ListBoxItem>
+                </ListBox>
+
+
+                <TextBlock Text="Правила загрузки файлов" 
+             FontFamily="JetBrains Mono NL ExtraBold" FontSize="16" 
+            FontWeight="Bold" Foreground="#FFBE93A3"
+            Width="241" Height="29" Margin="0,11,0,0"/>
+                <ListBox Margin="10" RenderTransformOrigin="0.5,0.5" Height="78" Width="742">
+
+                    <ListBox.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="#FF671102" Offset="0"/>
+                            <GradientStop Color="#FF3C0606" Offset="1"/>
+                        </LinearGradientBrush>
+                    </ListBox.Background>
+
+                    <ListBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="0" Y="-3"/>
+                        </TransformGroup>
+                    </ListBox.RenderTransform>
+                    <!-- Главный пункт -->
+                    <ListBoxItem Background="DarkRed" Height="73" Width="737" Foreground="#FFBE93A3">
+
+                        <StackPanel Margin="10,0,0,0" Width="678" Height="296" RenderTransformOrigin="0.5,0.5">
+                            <StackPanel.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform AngleY="0.101"/>
+                                    <RotateTransform/>
+                                    <TranslateTransform Y="0.598"/>
+                                </TransformGroup>
+                            </StackPanel.RenderTransform>
+                            <!-- Вложенные элементы -->
+                            <!-- Вложенные элементы -->
+                            <!-- Вложенные элементы -->
+                            <TextBlock FontFamily="JetBrains Mono NL ExtraBold" Height="19" Width="714" ><Run Language="ru-ru" Text="1. "/><Run Text="Загружать файлы только с официальных сайтов разработчиков."/></TextBlock>
+                            <TextBlock  Text="2. Проверять расширение файлов перед открытием (например, .exe и .bat могут быть опасными)." FontFamily="JetBrains Mono NL ExtraBold" Width="683" />
+                            <TextBlock FontFamily="JetBrains Mono NL ExtraBold" Height="18" Width="702" Text="3. Перед установкой сканировать файлы антивирусом." />
+                            <TextBlock  Text="4. Никогда не загружать ПО с торрент-трекеров и ненадежных ресурсов." FontFamily="JetBrains Mono NL ExtraBold" Height="20" />
+
+                        </StackPanel>
+                    </ListBoxItem>
+                </ListBox>
+
+                <TextBlock Text="Настройка брандмауэра и защиты ОС" 
+                           FontFamily="JetBrains Mono NL ExtraBold" FontSize="16" 
+                           FontWeight="Bold" Foreground="#FFBE93A3" 
+                           Width="333" Height="29" Margin="0,10,0,0"/>
+                <ListBox Margin="10" RenderTransformOrigin="0.5,0.5" Height="78" Width="739">
+
+                    <ListBox.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="#FF671102" Offset="0"/>
+                            <GradientStop Color="#FF3C0606" Offset="1"/>
+                        </LinearGradientBrush>
+                    </ListBox.Background>
+
+                    <ListBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="0" Y="-3"/>
+                        </TransformGroup>
+                    </ListBox.RenderTransform>
+                    <!-- Главный пункт -->
+                    <ListBoxItem  Background="DarkRed" Height="73" Width="735" Foreground="#FFBE93A3">
+
+                        <StackPanel Width="678" Height="79" RenderTransformOrigin="0.5,0.5">
+                            <StackPanel.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform AngleY="0.101"/>
+                                    <RotateTransform/>
+                                    <TranslateTransform Y="0.598"/>
+                                </TransformGroup>
+                            </StackPanel.RenderTransform>
+                            <!-- Вложенные элементы -->
+                            <!-- Вложенные элементы -->
+                            <!-- Вложенные элементы -->
+                            <TextBlock FontFamily="JetBrains Mono NL ExtraBold" Height="19" Width="714" ><Run Language="ru-ru" Text="1. "/><Run Text="Включить брандмауэр Windows для блокировки подозрительных подключений."/></TextBlock>
+                            <TextBlock  Text="2. Регулярно обновлять систему и антивирус, чтобы закрывать уязвимости." FontFamily="JetBrains Mono NL ExtraBold" Width="683" />
+                            <TextBlock FontFamily="JetBrains Mono NL ExtraBold" Height="18" Width="702" Text="3. Ограничить автоматический запуск подозрительных программ." />
+                            <TextBlock  Text="4. Использовать VPN для защиты при работе в публичных Wi-Fi сетях." FontFamily="JetBrains Mono NL ExtraBold" Height="20" />
+                        </StackPanel>
+                    </ListBoxItem>
+                </ListBox>
+
+                <TextBlock Text="Полезные ссылки " 
+            FontFamily="JetBrains Mono NL ExtraBold" FontSize="16" 
+             FontWeight="Bold" Foreground="#FFBE93A3" 
+             Width="156" Height="29" Margin="0,10,0,0"/>
+                <TextBlock FontSize="16" Margin="30,0,0,0">
+                 <Hyperlink NavigateUri="https://nsportal.ru/ap/library/drugoe/2024/03/13/individualnyy-proekt-raznovidnosti-kompyuternyh-virusov-i-metody"
+                    RequestNavigate="Hyperlink_RequestNavigate">
+                                Разновидности компьютерных вирусов и методы защиты
+                </Hyperlink>
+                </TextBlock>
+
+                <TextBlock FontSize="16" Margin="30,0,0,0" Foreground="#FFBE93A3">
+                <Hyperlink NavigateUri="https://cyberleninka.ru/article/n/vidy-kompyuternyh-virusov-sposoby-zaschity-kompyutera-ot-virusov"
+                    RequestNavigate="Hyperlink_RequestNavigate">
+                                Виды компьютерных вирусов и способы защиты
+                </Hyperlink>
+                </TextBlock>
+
+                <TextBlock FontSize="16" Margin="30,0,0,0" Foreground="#FFBE93A3">
+                <Hyperlink NavigateUri="https://www.kaspersky.ru/resource-center/preemptive-safety/antivirus-software-how-to-choose"
+                    RequestNavigate="Hyperlink_RequestNavigate">
+                                Как выбрать надежный антивирус
+                </Hyperlink>
+                </TextBlock>
+
+                <TextBlock FontSize="16" Margin="30,0,0,0" Foreground="#FFBE93A3">
+                <Hyperlink NavigateUri="https://hi-tech.mail.ru/review/59912-top-10-free-antiviruses/#anchor169329133228388311"
+                    RequestNavigate="Hyperlink_RequestNavigate">
+                                Топ-10 лучших бесплатных антивирусов 2025 года
+                </Hyperlink>
+                </TextBlock>
+
+
+
+
+
+                <Button Width="74" Height="75" Margin="0,20,650,0" Click="Nazad_Click" Background="DarkRed">
+                    <Image Height="65" Source="/image1/18.png" Stretch="Fill" Width="74" />
+                </Button>
+                
+                <StackPanel Height="50">
+                    
+                </StackPanel>
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
